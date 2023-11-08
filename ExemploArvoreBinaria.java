@@ -11,5 +11,7 @@ public class ExemploArvoreBinaria {
         a.insere(12,"F");
         a.insere(6,"G");
         a.insere(8,"H");
+        a.imprimeElementosArvore();
+        System.out.println("Altura : " + a.alturaArvore());
     }
 }

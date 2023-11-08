@@ -60,4 +60,35 @@ public class No {
             System.out.println("Id: " + atual.getId() + " Elemento: " + atual.getElemento());   
         }
     }
+
+    private void simFixado(No atual) {
+        if (atual != null) {
+            simFixado(atual.getEsq());
+            System.out.println("Id: " + atual.getId() + " Elemento: " + atual.getElemento());
+            simFixado(atual.getDir());
+        }
+    }
+
+    public void imprimeElementosArvore() {
+        preFixado(raiz);
+    }
+
+    private long calcAltura(No atual, long a) {
+        if (atual != null) {
+            long e, d;
+            e = calcAltura(atual.getEsq(), a)+1;
+            d = calcAltura(atual.getDir(), a)+1;
+            if (e > d) {
+                return a + e;
+            } else {
+                return a + d;
+            }
+        }
+        return a;
+    }
+
+    public long alturaArvore() {
+        long a = 0;
+        return calcAltura(raiz, a);
+    }
 }
