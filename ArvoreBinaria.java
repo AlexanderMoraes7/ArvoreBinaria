@@ -44,4 +44,20 @@ public class No {
     public No getDir() {
         return this.dir;
     }
+
+    private void preFixado(No atual) {
+        if (atual != null) {
+            System.out.println("Id: " + atual.getId() + " Elemento: " + atual.getElemento());
+            preFixado(atual.getEsq());
+            preFixado(atual.getDir());
+        }
+    }
+
+    private void posFixado(No atual) {
+        if (atual != null) {
+            posFixado(atual.getEsq());
+            posFixado(atual.getDir());
+            System.out.println("Id: " + atual.getId() + " Elemento: " + atual.getElemento());   
+        }
+    }
 }
