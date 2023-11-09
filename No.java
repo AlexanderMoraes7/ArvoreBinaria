@@ -1,45 +1,47 @@
-public class No {
-    private long id;
-    private Object elemento;
-    private No esq;
-    private No dir;
+package ArvoreBinaria;
 
-    public No(long id, Object elemento, No esq, No dir) {
+public class No {
+    private long id; // identificador do elemento
+    private Object elemento; // armazena o elemento de cada No
+    private No esq; // aponta para o filho esquerdo do nó
+    private No dir; // aponta para o filho direito do nó
+
+    public No(long id, Object elemento, No esq, No dir) { // construtor classe No
         this.id = id;
         this.elemento = elemento;
         this.esq = esq;
         this.dir = dir;
     }
 
-    public void setId(long id) {
+    public void setId(long id) { // método para alterar o identificador do nó
         this.id = id;
     }
 
-    public long getId() {
+    public long getId() { // método para receber o identificador do nó
         return this.id;
     }
 
-    public void setElemento(Object elemento) {
+    public void setElemento(Object elemento) { // método para alterar o elemento
         this.elemento = elemento;
     }
 
-    public Object getElemento() {
-        return this.elemento;
+    public Object getElemento() { // método para receber o objeto contido no No
+        return elemento;
     }
 
-    public void setEsq(No esq) {
+    public void setEsq(No esq) { // método que altera o filho esquerdo
         this.esq = esq;
     }
 
-    public No getEsq() {
-        return this.esq;
+    public No getEsq() { // método que recebe o filho esquerdo do nó
+        return esq;
     }
-
-    public void setDir(No dir) {
+    
+    public void setDir(No dir) {// método que altera o filho direito
         this.dir = dir;
     }
 
-    public No getDir() {
-        return this.dir;
+    public No getDir() { // método que recebe o filho direito do nó
+    return dir;
     }
 }
