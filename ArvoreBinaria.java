@@ -58,9 +58,14 @@ public class ArvoreBinaria {
     }
 
     public void imprimeElementosArvore() {// impressão dos elementos da árvore
+        System.out.println("InFixado:");
         inFixado(raiz);
-        System.out.println("\n\n");
+        System.out.println("\n");
+        System.out.println("PosFixado:");
         posFixado(raiz);
+        System.out.println("\n");
+        System.out.println("PreFixado");
+        preFixado(raiz);
     }
 
     private long calcAltura(No atual, long a) {// calcula a altura da árvore
